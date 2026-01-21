@@ -38,6 +38,30 @@ class ETFDividendScraper:
                 'name': 'Neos Russell 2000 High Income ETF',
                 'frequency': 'Monthly',
                 'declare_day': '3rd Tuesday'
+            },
+            {
+                'ticker': 'IAUI',
+                'name': 'Innovator Gold-U.S. Equity Income ETF',
+                'frequency': 'Monthly',
+                'declare_day': 'Monthly'
+            },
+            {
+                'ticker': 'KQQQ',
+                'name': 'Kurv Yield Premium Strategy Nasdaq 100 ETF',
+                'frequency': 'Monthly',
+                'declare_day': 'Monthly'
+            },
+            {
+                'ticker': 'MSTW',
+                'name': 'Roundhill MicroStrategy Covered Call ETF',
+                'frequency': 'Weekly',
+                'declare_day': 'Weekly'
+            },
+            {
+                'ticker': 'WPAY',
+                'name': 'YieldMax Tickers PayPal Option Income ETF',
+                'frequency': 'Monthly',
+                'declare_day': 'Monthly'
             }
         ]
         
