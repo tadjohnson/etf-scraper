@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  scraper:
+    build:
+      context: .
+    platform: linux/arm64
+    container_name: etf-scraper
+    volumes:
+      - ./output:/app/output
+      - ./scraper.py:/app/scraper.py:ro
+    environment:
+      - TZ=America/Chicago
+
+  api:
+    build:
+      context: .
+    platform: linux/arm64
+    container_name: etf-api
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./output:/app/output
+      - ./api_server.py:/app/api_server.py:ro
+      - ./scraper.py:/app/scraper.py:ro
+      - ./frontend.html:/app/frontend.html:ro
+      - ./dividend_history_manager.py:/app/dividend_history_manager.py:ro  # Add this
+    environment:
+      - TZ=America/Chicago
+      - FLASK_APP=api_server.py
+    command: python api_server.py
