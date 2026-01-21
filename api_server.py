@@ -149,7 +149,7 @@ def trigger_scrape():
         
         # Run the scraper in the background
         result = subprocess.run(
-            ['python', 'scraper.py'],
+            ['python3', 'scraper_requests.py'],
             capture_output=True,
             text=True,
             timeout=300  # 5 minute timeout
