@@ -4,8 +4,9 @@ services:
   scraper:
     build:
       context: .
-    platform: linux/arm64
+    platform: linux/amd64
     container_name: etf-scraper
+    restart: always
     volumes:
       - ./output:/app/output
       - ./scraper.py:/app/scraper.py:ro
@@ -15,8 +16,9 @@ services:
   api:
     build:
       context: .
-    platform: linux/arm64
+    platform: linux/amd64
     container_name: etf-api
+    restart: always
     ports:
       - "5001:5000"
     volumes:
