@@ -27,13 +27,11 @@ def get_dividends():
         csv_path = os.path.join(DATA_DIR, 'etf_dividends.csv')
         
         if not os.path.exists(csv_path):
-            response = jsonify({
+            return jsonify({
                 'error': 'No data available. Run the scraper first.',
                 'data': [],
                 'success': False
             })
-            response.status_code = 404
-            return response
         
         # Read CSV and convert to JSON
         df = pd.read_csv(csv_path)
