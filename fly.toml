@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for etf-scraper-tadfad on 2026-01-22T17:35:25Z
+# fly.toml app configuration file generated for etf-scraper on 2026-01-22T17:47:54Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'etf-scraper-tadfad'
+app = 'etf-scraper'
 primary_region = 'dfw'
 
 [build]
